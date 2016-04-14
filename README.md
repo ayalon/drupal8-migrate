@@ -15,6 +15,7 @@ drush site-install  standard \
 --account-pass=some_admin_password \
 --site-mail="admin@example.com" \
 --site-name="Site-Install"
+```
 
 ## Import the drupal configuration
 
