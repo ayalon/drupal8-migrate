@@ -25,6 +25,7 @@ class PageNode extends CSV {
 
     //override the path to point to the local module directory
     $this->configuration['path'] = drupal_get_path('module', 'migrate_menu') . '/data/navigation_small.csv';
+    $this->configuration['delimiter'] = ';';
 
   }
 
@@ -35,8 +36,9 @@ class PageNode extends CSV {
 
     // Magic: get the current page name.
     for ($i = 4; $i > 0; $i--) {
-      if (!empty($row->{'Level_' . $i})) {
-        $row->name = $row->{'Level_' . $i};
+      $csv_data = $row->getSource();
+      if (!empty($csv_data['Level_' . $i])) {
+        $row->setSourceProperty('name', $csv_data['Level_' . $i]);
         break;
       }
     }
