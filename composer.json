@@ -29,7 +29,8 @@
         "drupal/admin_toolbar": "^8.1",
         "drupal/address": "^8.1@beta",
         "drupal/page_manager": "^8.1@alpha",
-        "drupal/media_entity": "8.1.x-dev"
+        "drupal/media_entity": "8.1.x-dev",
+        "drupal/config_devel": "8.1.x-dev"
     },
     "require-dev": {
         "behat/mink": "~1.6",

@@ -1,11 +1,10 @@
 # Migration configuration
 id: page_node
 label: Dummy pages
-migration_tags:
-  - CSV
+migration_group: liip
 source:
-  plugin: csv
-  # Full path to the file.
+  plugin: page_node
+  # Full path to the file. Is overriden in my plugin
   path: public://csv/navigation_small.csv
   # The number of rows at the beginning which are not data.
   header_row_count: 1
@@ -35,3 +34,6 @@ process:
     default_value: 0
   'body/value': body
   'body/summary': excerpt
+
+#Absolutely necessary if you dont want an error
+migration_dependencies: {}

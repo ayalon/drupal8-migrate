@@ -1,0 +1,14 @@
+# A "migration group" is - surprise! - a group of migrations. It is used to
+# group migrations for display by our tools, and to perform operations on a
+# specific set of migrations. It can also be used to hold any configuration
+# common to those migrations, so it doesn't have to be duplicated in each one.
+
+# The machine name of the group, by which it is referenced in individual
+# migrations.
+id: liip
+
+# A human-friendly label for the group.
+label: Liip CSV Imports
+
+# More information about the group.
+description: All custom imports of Liip AG

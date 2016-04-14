@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cc7e92a3386d504a2ec022c40edcebe5",
-    "content-hash": "c752356772f5ac6d482b5769583be48e",
+    "hash": "7e7ed0866425ea8e3fdd1bfed21d2a95",
+    "content-hash": "b7f03d17868ade697db3aa08902d90e1",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -1015,6 +1015,31 @@
             "description": "Drupal administration theme with modern minimalist design.",
             "homepage": "https://www.drupal.org/project/adminimal_theme",
             "time": "2015-12-05 16:48:42"
+        },
+        {
+            "name": "drupal/config_devel",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/config_devel",
+                "reference": "93bd3c663b5cb3319babd0e8b8cca90a4494f26d"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Helps developers work with configuration.",
+            "homepage": "https://www.drupal.org/project/config_devel",
+            "time": "2016-04-04 20:56:57"
         },
         {
             "name": "drupal/core",
@@ -5446,6 +5471,7 @@
         "drupal/address": 10,
         "drupal/page_manager": 15,
         "drupal/media_entity": 20,
+        "drupal/config_devel": 20,
         "jcalderonzumba/gastonjs": 20
     },
     "prefer-stable": true,
