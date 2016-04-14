@@ -12,13 +12,13 @@ use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\migrate\Row;
 
 /**
- * Source plugin for page node.
+ * Source plugin for menu items.
  *
  * @MigrateSource(
- *   id = "page_node"
+ *   id = "menu_item"
  * )
  */
-class PageNode extends CSV {
+class MenuItem extends CSV {
 
   public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $migration);
@@ -34,16 +34,30 @@ class PageNode extends CSV {
    */
   public function prepareRow(Row $row) {
 
-    // Magic: get the current page name.
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+
     $csv_data = $row->getSource();
+
+    $row->setSourceProperty('name', '');
+    $row->setSourceProperty('parent', '');
+
+    $row->setSourceProperty('link_path', $csv_data['ID']);
+    $row->setSourceProperty('options', array());
+
+    // Super Macic function for defining parent term
+    // This magic allows us to avoid relying on the name while finding the parent term.
+
     for ($i = 4; $i > 0; $i--) {
       if (!empty($csv_data['Level_' . $i])) {
         $row->setSourceProperty('name', $csv_data['Level_' . $i]);
+        if ($i > 1) {
+          $row->setSourceProperty('parent_name', $csv_data['Level_' . ($i - 1)]);
+        }
         break;
       }
     }
-
-    return parent::prepareRow($row);
   }
 
 }

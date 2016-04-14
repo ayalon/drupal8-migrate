@@ -1,0 +1,56 @@
+# Migration configuration
+id: menu_item
+label: Menu links
+migration_group: liip
+source:
+  plugin: menu_item
+  # Full path to the file. Is overriden in my plugin
+  path: public://csv/navigation_small.csv
+  # The number of rows at the beginning which are not data.
+  header_row_count: 1
+  # These are the field names from the source file representing the key
+  # uniquely identifying each node - they will be stored in the migration
+  # map table as columns sourceid1, sourceid2, and sourceid3.
+  keys:
+    - ID
+destination:
+  plugin: entity:menu_link_content
+  no_stub: true
+process:
+  bundle: menu_link_content
+  title: name
+  menu_name:
+    plugin: default_value
+    default_value: main
+  # Full Pipeline: see https://www.drupal.org/node/2129651
+  'link/uri':
+    -
+      plugin: migration
+      migration: page_node
+      source: ID
+    -
+      plugin: generate_path
+  route_name: '@route/route_name'
+  route_parameters: '@route/route_parameters'
+  url: '@route/url'
+  options: '@route/options'
+  external:
+    plugin: default_value
+    default_value: 0
+  weight: ID
+  expanded:
+    plugin: default_value
+    default_value: 1
+  enabled:
+    plugin: default_value
+    default_value: 1
+  parent:
+    plugin: menu_link_parent
+    source:
+      - Parent_ID
+      - '@menu_name'
+      - parent_name
+  changed: updated
+migration_dependencies:
+  required:
+    - page_node
