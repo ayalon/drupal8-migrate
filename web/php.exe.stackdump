@@ -1,0 +1,7 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=68B989E1
+eax=FFD41000 ebx=00286C30 ecx=00286D10 edx=00286E9E esi=FFD40FFF edi=FFD41000
+ebp=00000000 esp=00286B50 program=C:\Zend\babun\.babun\cygwin\bin\php.exe, pid 6532, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+End of stack trace

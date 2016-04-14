@@ -1,0 +1,68 @@
+ID;Parent_ID;Level_1;Level_2;Level_3;Level_4
+1;;Firmenkunden;;;
+2;1;Firmenkunden;Konten & Karten;;
+3;2;Firmenkunden;Konten & Karten;Paketlösung;
+4;3;Firmenkunden;Konten & Karten;Paketlösung;BUSINESSPlus-Paket
+5;2;Firmenkunden;Konten & Karten;Firmenkonten;
+6;5;Firmenkunden;Konten & Karten;Firmenkonten;Kontokorrent
+7;5;Firmenkunden;Konten & Karten;Firmenkonten;Kontokorrent EUR/FW
+8;5;Firmenkunden;Konten & Karten;Firmenkonten;Anlage F+I
+9;5;Firmenkunden;Konten & Karten;Firmenkonten;Anlagekonto BVG
+10;2;Firmenkunden;Konten & Karten;Immobilienkonten;
+11;10;Firmenkunden;Konten & Karten;Immobilienkonten;Immobilien Verwaltungskonto
+12;10;Firmenkunden;Konten & Karten;Immobilienkonten;Baukonto GU-Konto
+13;10;Firmenkunden;Konten & Karten;Immobilienkonten;Mieterkautionskonto
+14;2;Firmenkunden;Konten & Karten;Karten;
+15;14;Firmenkunden;Konten & Karten;Karten;Maestrokarte
+16;14;Firmenkunden;Konten & Karten;Karten;Mastercard
+42;;Privatkunden;;;
+43;42;Privatkunden;Konten & Karten;;
+44;43;Privatkunden;Konten & Karten;Paketlösungen;
+45;44;Privatkunden;Konten & Karten;Paketlösungen;KBPlus-Paket
+46;44;Privatkunden;Konten & Karten;Paketlösungen;JUGENDPlus-Paket
+47;44;Privatkunden;Konten & Karten;Paketlösungen;BILDUNGPlus-Paket
+48;43;Privatkunden;Konten & Karten;Privatkonten;
+67;42;Privatkunden;Finanzieren & Eigenheim;;
+68;67;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;
+69;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Festhypothek
+70;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Liborhypothek
+71;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Variable Hypothek
+72;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Energiespar-Hypothek
+87;42;Privatkunden;Vorsorgen;;
+88;87;Privatkunden;Vorsorgen;Vorsorgelösungen;
+89;88;Privatkunden;Vorsorgen;Vorsorgelösungen;Konto Vorsorge 3a
+90;88;Privatkunden;Vorsorgen;Vorsorgelösungen;Sparen mit Wertpapieren 3a
+91;88;Privatkunden;Vorsorgen;Vorsorgelösungen;Freizügigkeitskonto
+92;88;Privatkunden;Vorsorgen;Vorsorgelösungen;Freizügigkeits-Wertschriftensparen
+93;87;Privatkunden;Vorsorgen;Risikoversicherung;
+94;93;Privatkunden;Vorsorgen;Risikoversicherung;Swisscanto Safe
+95;42;Privatkunden;Anlegen;;
+126;;Ihre SHKB;;;
+127;126;Ihre SHKB;Kontakt;;
+128;127;Ihre SHKB;Kontakt;Filialen;
+129;127;Ihre SHKB;Kontakt;Bancomaten;
+130;127;Ihre SHKB;Kontakt;Notfallnummern;
+131;127;Ihre SHKB;Kontakt;Ansprechpartner;
+132;126;Ihre SHKB;Bank;;
+133;132;Ihre SHKB;Bank;Vision;
+134;132;Ihre SHKB;Bank;Kennzahlen;
+135;132;Ihre SHKB;Bank;Geschäftsbericht;
+136;132;Ihre SHKB;Bank;Unser Engagement;
+137;126;Ihre SHKB;Bank;;Vergünstigungen
+138;132;Ihre SHKB;Bank;Reglemente;
+139;132;Ihre SHKB;Bank;AGB;
+140;126;Ihre SHKB;Aktuelles;;
+141;140;Ihre SHKB;Aktuelles;Newsmeldungen;
+142;140;Ihre SHKB;Aktuelles;Publikationen;
+143;126;Ihre SHKB;Event-Kalender;;
+144;126;Ihre SHKB;Jobs;;
+145;144;Ihre SHKB;Jobs;Stellenangebot;
+146;144;Ihre SHKB;Jobs;Lehrstellen;
+147;126;Ihre SHKB;Menschen;;
+148;147;Ihre SHKB;Menschen;Geschäftsleitung;
+149;148;Ihre SHKB;Menschen;Kundenberater;
+150;126;Ihre SHKB;Mediencenter;;
+151;150;Ihre SHKB;Mediencenter;Pressemitteilungen;
+152;150;Ihre SHKB;Mediencenter;Logo;
+153;150;Ihre SHKB;Mediencenter;Bilder aus der Region;
+154;150;Ihre SHKB;Mediencenter;Medienkontakt;
