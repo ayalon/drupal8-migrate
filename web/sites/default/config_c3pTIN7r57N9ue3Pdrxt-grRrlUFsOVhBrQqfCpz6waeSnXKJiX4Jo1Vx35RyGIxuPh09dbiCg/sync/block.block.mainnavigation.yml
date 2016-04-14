@@ -1,0 +1,24 @@
+uuid: 42abcf18-1c73-4d24-86aa-720a8f256bc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bartik
+id: mainnavigation
+theme: bartik
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: visible
+  level: 2
+  depth: 0
+visibility: {  }

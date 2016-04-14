@@ -15,9 +15,18 @@ drush site-install  standard \
 --account-pass=some_admin_password \
 --site-mail="admin@example.com" \
 --site-name="Site-Install"
+
+## Import the drupal configuration
+
+- in settings.php adapt the path to the config folder
+```
+$config_directories['sync'] = 'sites/default/config_XXX
 ```
 
-- import configuration using "drush config-import"
+- import configuration using drush
+```
+drush config-import
+```
 
 ## Update configuration yml
 ```

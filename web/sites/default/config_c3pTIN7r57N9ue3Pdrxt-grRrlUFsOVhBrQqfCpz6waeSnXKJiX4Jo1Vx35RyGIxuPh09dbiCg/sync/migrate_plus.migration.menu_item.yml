@@ -1,0 +1,54 @@
+uuid: b028e443-e006-4127-8979-93395f9be291
+langcode: en
+status: true
+dependencies: {  }
+id: menu_item
+migration_tags: null
+migration_group: liip
+label: 'Menu links'
+source:
+  plugin: menu_item
+  path: 'public://csv/navigation_small.csv'
+  header_row_count: 1
+  keys:
+    - ID
+process:
+  bundle: menu_link_content
+  title: name
+  menu_name:
+    plugin: default_value
+    default_value: main
+  link/uri:
+    -
+      plugin: migration
+      migration: page_node
+      source: ID
+    -
+      plugin: generate_path
+  route_name: '@route/route_name'
+  route_parameters: '@route/route_parameters'
+  url: '@route/url'
+  options: '@route/options'
+  external:
+    plugin: default_value
+    default_value: 0
+  weight: ID
+  expanded:
+    plugin: default_value
+    default_value: 1
+  enabled:
+    plugin: default_value
+    default_value: 1
+  parent:
+    plugin: menu_link_parent
+    source:
+      - Parent_ID
+      - '@menu_name'
+      - parent_name
+  changed: updated
+destination:
+  plugin: 'entity:menu_link_content'
+  no_stub: true
+migration_dependencies:
+  required:
+    - page_node
