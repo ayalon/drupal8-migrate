@@ -1,0 +1,46 @@
+id: commment
+label: Comments
+migration_group: liip
+source:
+  plugin: json_source
+  path: 'http://jsonplaceholder.typicode.com/comments'
+  headers:
+    Accept: application/json
+  identifier: id
+  identifierDepth: 0
+  fields:
+    - postId
+    - id
+    - name
+    - email
+    - body
+destination:
+  plugin: entity:comment
+process:
+  entity_id:
+    -
+      plugin: migration
+      migration: post
+      source: postId
+  entity_type:
+      plugin: default_value
+      default_value: 'node'
+  comment_type:
+      plugin: default_value
+      default_value: 'comment'
+  field_name:
+      plugin: default_value
+      default_value: 'comment'
+  subject:
+    plugin: truncate
+    source: name
+  uid:
+    plugin: default_value
+    default_value: 1
+  name: mail
+  mail: mail
+  comment_body: body
+
+migration_dependencies:
+  required:
+    - post

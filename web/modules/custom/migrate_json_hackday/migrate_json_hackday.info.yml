@@ -11,3 +11,4 @@ dependencies:
 config_devel:
   install:
     - migrate_plus.migration.post
+    - migrate_plus.migration.comment
