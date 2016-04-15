@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7e7ed0866425ea8e3fdd1bfed21d2a95",
-    "content-hash": "b7f03d17868ade697db3aa08902d90e1",
+    "hash": "81e738e39086aa7c33c4a921c37808fd",
+    "content-hash": "80d54ee5edd3f54fedde0b89bd7f0fed",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -1042,6 +1042,45 @@
             "time": "2016-04-04 20:56:57"
         },
         {
+            "name": "drupal/config_update",
+            "version": "8.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/config_update.git",
+                "reference": "ac1526df5836a611f04bb421945beddb6306b7f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_update-8.x-1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/config": "8.*",
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/config_update_ui": "self.version"
+            },
+            "suggest": {
+                "drupal/config": "Required by drupal/config_update_ui",
+                "drupal/core": "Required by drupal/config_update_ui"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides basic revert and update functionality for other modules",
+            "homepage": "https://www.drupal.org/project/config_update",
+            "time": "2016-03-01 16:28:35"
+        },
+        {
             "name": "drupal/core",
             "version": "8.1.0-rc1",
             "source": {
@@ -1256,6 +1295,45 @@
             "time": "2016-04-01 20:16:42"
         },
         {
+            "name": "drupal/features",
+            "version": "8.3.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/features",
+                "reference": "14d66f68c13a0b93134ba15ac2ef641e6799eb1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/features-8.x-3.0-beta3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/config": "8.*",
+                "drupal/config_update": "8.*",
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/features_ui": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/features_ui"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-3.x": "8.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Enables administrators to package configuration into modules.",
+            "homepage": "https://www.drupal.org/project/features",
+            "time": "2016-04-07 19:57:25"
+        },
+        {
             "name": "drupal/media_entity",
             "version": "dev-8.x-1.x",
             "source": {
@@ -1391,6 +1469,9 @@
             "extra": {
                 "branch-alias": {
                     "dev-8.x-1.x": "8.1.x-dev"
+                },
+                "patches_applied": {
+                    "Patch for 8.1": "https://www.drupal.org/files/issues/migrate_source_json-make_project_compatible-2694591-2.patch"
                 }
             },
             "notification-url": "https://packagist.drupal-composer.org/downloads/",

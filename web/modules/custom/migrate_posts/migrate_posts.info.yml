@@ -1,0 +1,12 @@
+name: migrate_posts
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - field
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+version: 8.x-1.0

@@ -30,7 +30,8 @@
         "drupal/address": "^8.1@beta",
         "drupal/page_manager": "^8.1@alpha",
         "drupal/media_entity": "8.1.x-dev",
-        "drupal/config_devel": "8.1.x-dev"
+        "drupal/config_devel": "8.1.x-dev",
+        "drupal/features": "8.3.0-beta3"
     },
     "require-dev": {
         "behat/mink": "~1.6",
@@ -73,6 +74,9 @@
         "patches": {
             "drupal/core": {
                 "Patch for migrate": "https://www.drupal.org/files/issues/source_plugins_have_a-2560795-64.patch"
+            },
+            "drupal/migrate_source_json": {
+                "Patch for 8.1": "https://www.drupal.org/files/issues/migrate_source_json-make_project_compatible-2694591-2.patch"
             }
         }
     }
