@@ -1,11 +1,11 @@
 ## Usage
 
-- git clone the repo
+- git clone the repo "git clone git@gitlab.liip.ch:jonathan.minder/drupal8-migrate.git"
 - run "composer install"
 - set up a virtual host pointing to the web folder
-- run drupal install with standard profile manually 
+- run drupal install with standard profile manually via url 
 
-or with the following command
+or with the following command (drush 8 ist required)
 
 ```
 drush site-install  standard \
@@ -30,6 +30,23 @@ drush config-import
 ```
 
 ## Update configuration yml
+Because of the CMI all yml files in the config/install directory are only imported when installing the module.
+This is very impractical if one want to develop new configuration files.
+To solve this, a module "Configuration Development" is part of this installation.
+It is possible to import certain yml files on every request. But unfortunatly drush commands are not supported.
+So we need to add this files we want to import to a new section in our module.info.yml. 
+
+```yaml
+config_devel:
+  install:
+    - migrate_plus.migration.page_node
+    - migrate_plus.migration.menu_item
+    - migrate_plus.migration_group.liip
+```
+
+Then we can run the following commands
+after updating the yml file. This will import the new configuration file into CMI.
+
 ```
 drush cdi migrate_menu
 drush cr
@@ -45,10 +62,12 @@ drush mi menu_item --update
 ```
 
 ## Task for the Hackday:
-
 Let's write an importer for a json source, usually a rest interface.
 
 I propose we use this JSON data:
 http://jsonplaceholder.typicode.com/posts
 
 Import the posts into a node type "post"
+
+Then we import the comments referencing the  posts.
+http://jsonplaceholder.typicode.com/comments
