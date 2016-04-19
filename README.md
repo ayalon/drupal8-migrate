@@ -1,6 +1,6 @@
 ## Usage
 
-- git clone the repo "git clone git@gitlab.liip.ch:jonathan.minder/drupal8-migrate.git"
+- git clone the repo "git clone git@github.com:ayalon/drupal8-migrate.git"
 - run "composer install"
 - set up a virtual host pointing to the web folder
 
