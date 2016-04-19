@@ -3,12 +3,21 @@
 - git clone the repo "git clone git@gitlab.liip.ch:jonathan.minder/drupal8-migrate.git"
 - run "composer install"
 - set up a virtual host pointing to the web folder
-- run drupal install with standard profile manually via url 
+
+
+## Set the path to the drupal configuration
+
+- in settings.php adapt the path to the config folder
+```
+$config_directories['sync'] = 'sites/default/config_migrate
+```
+
+## Do a site install with drush
 
 or with the following command (drush 8 ist required)
 
 ```
-drush site-install  standard \
+drush site-install  config_installer \
 --db-url=mysql://DBUSERNAME:DBPASSWORD@localhost/some_db \
 --account-mail="admin@example.com" \
 --account-name=admin \
@@ -17,12 +26,7 @@ drush site-install  standard \
 --site-name="Site-Install"
 ```
 
-## Import the drupal configuration
 
-- in settings.php adapt the path to the config folder
-```
-$config_directories['sync'] = 'sites/default/config_XXX
-```
 
 - import configuration using drush
 ```
