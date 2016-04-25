@@ -14,11 +14,11 @@ $config_directories['sync'] = 'sites/default/config_migrate
 
 ## Do a site install with drush
 
-or with the following command (drush 8 ist required)
+Drush 8 ist required.
 
 ```
 drush site-install  config_installer \
---db-url=mysql://DBUSERNAME:DBPASSWORD@localhost/some_db \
+--db-url=mysql://DBUSERNAME:DBPASSWORD@127.0.0.1/some_db \
 --account-mail="admin@example.com" \
 --account-name=admin \
 --account-pass=some_admin_password \

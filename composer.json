@@ -74,7 +74,8 @@
         },
         "patches": {
             "drupal/core": {
-                "Patch for migrate": "https://www.drupal.org/files/issues/source_plugins_have_a-2560795-64.patch"
+                "Patch for migrate": "https://www.drupal.org/files/issues/source_plugins_have_a-2560795-64.patch",
+                "Patch config installer": "https://www.drupal.org/files/issues/2589967-2-55.patch"
             },
             "drupal/migrate_source_json": {
                 "Patch for 8.1": "https://www.drupal.org/files/issues/migrate_source_json-make_project_compatible-2694591-2.patch"
