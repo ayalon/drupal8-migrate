@@ -1,9 +1,8 @@
 ## Usage
 
-- git clone the repo "git clone git@gitlab.liip.ch:jonathan.minder/drupal8-migrate.git"
+- git clone the repo
 - run "composer install"
-- set up a virtual host pointing to the web folder
-
+- set up a virtual host pointing to the web folder in apache/nginx
 
 ## Set the path to the drupal configuration
 
@@ -26,12 +25,8 @@ drush site-install  config_installer \
 --site-name="Site-Install"
 ```
 
-
-
-- import configuration using drush
-```
-drush config-import
-```
+If you correctly set up the path in settings.php to the config folder, all settings will be imported during
+the site install.
 
 ## Update configuration yml
 Because of the CMI all yml files in the config/install directory are only imported when installing the module.
