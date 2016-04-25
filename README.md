@@ -8,7 +8,7 @@
 
 - in settings.php adapt the path to the config folder
 ```
-$config_directories['sync'] = 'sites/default/config_migrate
+$config_directories['sync'] = 'sites/default/config_migrate/sync';
 ```
 
 ## Do a site install with drush
