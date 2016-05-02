@@ -1022,7 +1022,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_devel",
-                "reference": "93bd3c663b5cb3319babd0e8b8cca90a4494f26d"
+                "reference": "d774944da82270c743e2dd0d38b506281d16034b"
             },
             "require": {
                 "drupal/core": "8.*"
@@ -1039,7 +1039,7 @@
             ],
             "description": "Helps developers work with configuration.",
             "homepage": "https://www.drupal.org/project/config_devel",
-            "time": "2016-04-04 20:56:57"
+            "time": "2016-04-28 23:59:11"
         },
         {
             "name": "drupal/config_installer",
@@ -1113,16 +1113,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.1.0-rc1",
+            "version": "8.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "e0162e1133024a4be4e6d44c731e8ffd02bc502e"
+                "reference": "78fb721295521bd9680731cf2a8287fb6e889afe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/e0162e1133024a4be4e6d44c731e8ffd02bc502e",
-                "reference": "e0162e1133024a4be4e6d44c731e8ffd02bc502e",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/78fb721295521bd9680731cf2a8287fb6e889afe",
+                "reference": "78fb721295521bd9680731cf2a8287fb6e889afe",
                 "shasum": ""
             },
             "require": {
@@ -1252,7 +1252,7 @@
                 "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
                 "mikey179/vfsstream": "~1.2",
                 "phpunit/phpunit": "~4.8",
-                "symfony/css-selector": "2.7.*"
+                "symfony/css-selector": "~2.8"
             },
             "type": "drupal-core",
             "extra": {
@@ -1283,7 +1283,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2016-04-06 20:58:23"
+            "time": "2016-04-20 01:34:34"
         },
         {
             "name": "drupal/ctools",
@@ -1324,6 +1324,38 @@
             "description": "Provides a number of utility and helper APIs for Drupal developers and site builders.",
             "homepage": "https://www.drupal.org/project/ctools",
             "time": "2016-04-01 20:16:42"
+        },
+        {
+            "name": "drupal/entity",
+            "version": "8.1.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity",
+                "reference": "70a105ae063c54bf59e67f9e41cb9121374acb7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity-8.x-1.0-alpha3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "~8.1",
+                "drupal/system": ">=8.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
+            "homepage": "http://drupal.org/project/entity",
+            "time": "2016-04-27 08:54:12"
         },
         {
             "name": "drupal/features",
@@ -1370,10 +1402,11 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/media_entity.git",
-                "reference": "85b1b50942231c7a75f3370c5ec05ce021a0db38"
+                "reference": "c02b861132438dbf6b543bbaec51c08cf71ed10f"
             },
             "require": {
                 "drupal/core": "8.*",
+                "drupal/entity": ">=8.1.0-alpha3",
                 "drupal/image": "8.*",
                 "drupal/user": "8.*",
                 "drupal/views": "8.*"
@@ -1390,7 +1423,7 @@
             ],
             "description": "Media entity API.",
             "homepage": "https://www.drupal.org/project/media_entity",
-            "time": "2016-04-14 09:37:00"
+            "time": "2016-05-01 16:44:52"
         },
         {
             "name": "drupal/migrate_api",
@@ -1436,7 +1469,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/migrate_plus.git",
-                "reference": "fc97ef908f585c13211fcef5e1d17d7971a47f74"
+                "reference": "c289b00839dc8696c610b2ee4f7758885396d489"
             },
             "require": {
                 "drupal/core": "8.*",
@@ -1482,7 +1515,7 @@
             ],
             "description": "Enhancements to core migration support",
             "homepage": "https://www.drupal.org/project/migrate_plus",
-            "time": "2016-04-13 22:07:29"
+            "time": "2016-04-27 14:45:43"
         },
         {
             "name": "drupal/migrate_source_json",
@@ -5465,7 +5498,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v2.7.11",
+            "version": "v2.7.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
