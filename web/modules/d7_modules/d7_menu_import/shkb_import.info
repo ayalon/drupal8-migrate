@@ -1,9 +1,0 @@
-name = "SHKB: Import content tree"
-description = "Import CSV"
-package = "SHKB"
-core = 7.x
-dependencies[] = migrate
-dependencies[] = migrate_ui
-
-files[] = nodes.inc
-files[] = menu.inc

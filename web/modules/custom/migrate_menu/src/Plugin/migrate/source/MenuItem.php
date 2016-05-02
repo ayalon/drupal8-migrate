@@ -24,7 +24,7 @@ class MenuItem extends CSV {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $migration);
 
     //override the path to point to the local module directory
-    $this->configuration['path'] = drupal_get_path('module', 'migrate_menu') . '/data/navigation_small.csv';
+    $this->configuration['path'] = drupal_get_path('module', 'migrate_menu') . '/data/navigation.csv';
     $this->configuration['delimiter'] = ';';
 
   }
