@@ -1,0 +1,50 @@
+uuid: 5f87a3ad-9898-42c8-b2bb-7456570bbf6b
+langcode: en
+status: true
+dependencies: {  }
+id: comment
+migration_tags: null
+migration_group: liip
+label: Comments
+source:
+  plugin: json_source
+  path: 'http://jsonplaceholder.typicode.com/comments'
+  headers:
+    Accept: application/json
+  identifier: id
+  identifierDepth: 0
+  fields:
+    - postId
+    - id
+    - name
+    - email
+    - body
+process:
+  entity_id:
+    -
+      plugin: migration
+      migration: post
+      source: postId
+  entity_type:
+    plugin: default_value
+    default_value: node
+  comment_type:
+    plugin: default_value
+    default_value: comment
+  field_name:
+    plugin: default_value
+    default_value: comment
+  subject:
+    plugin: truncate
+    source: name
+  uid:
+    plugin: default_value
+    default_value: 1
+  name: mail
+  mail: mail
+  comment_body: body
+destination:
+  plugin: 'entity:comment'
+migration_dependencies:
+  required:
+    - post

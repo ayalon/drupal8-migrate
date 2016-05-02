@@ -9,6 +9,7 @@ module:
   comment: 0
   config: 0
   config_devel: 0
+  config_update: 0
   contact: 0
   contextual: 0
   ctools: 0
@@ -16,6 +17,8 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  features: 0
+  features_ui: 0
   field: 0
   field_ui: 0
   file: 0
@@ -26,10 +29,14 @@ module:
   link: 0
   menu_ui: 0
   migrate: 0
+  migrate_json_hackday: 0
   migrate_menu: 0
   migrate_plus: 0
+  migrate_posts: 0
   migrate_source_csv: 0
+  migrate_source_json: 0
   migrate_tools: 0
+  mycache: 0
   node: 0
   options: 0
   page_cache: 0
