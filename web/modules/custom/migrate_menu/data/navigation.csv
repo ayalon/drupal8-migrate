@@ -15,76 +15,19 @@ ID;Parent_ID;Level_1;Level_2;Level_3;Level_4
 14;2;Firmenkunden;Konten & Karten;Karten;
 15;14;Firmenkunden;Konten & Karten;Karten;Maestrokarte
 16;14;Firmenkunden;Konten & Karten;Karten;Mastercard
-17;1;Firmenkunden;Zahlungsverkehr;;
-18;17;Firmenkunden;Zahlungsverkehr;Zahlungsverkehr Firmenkunden;
-19;17;Firmenkunden;Zahlungsverkehr;Zahlungssoftware;
-20;17;Firmenkunden;Zahlungsverkehr;Zahlungsterminal;
-21;17;Firmenkunden;Zahlungsverkehr;E-Banking;
-22;17;Firmenkunden;Zahlungsverkehr;CrontoSign Swiss;
-23;17;Firmenkunden;Zahlungsverkehr;E-Banking Sicherheit;
-24;1;Firmenkunden;Finanzieren;;
-25;24;Firmenkunden;Finanzieren;Unternehmensfinanzierung;
-26;25;Firmenkunden;Finanzieren;Unternehmensfinanzierung;Finanzierungslösungen
-27;25;Firmenkunden;Finanzieren;Unternehmensfinanzierung;Exportfinanzierung
-28;25;Firmenkunden;Finanzieren;Unternehmensfinanzierung;Bürgschaft & Garantien
-29;24;Firmenkunden;Finanzieren;Immobilienfinanzierung;
-30;29;Firmenkunden;Finanzieren;Immobilienfinanzierung;Hypotheken
-31;29;Firmenkunden;Finanzieren;Immobilienfinanzierung;Immobilien bewerten
-32;29;Firmenkunden;Finanzieren;Immobilienfinanzierung;Immobilien als Investition
-33;29;Firmenkunden;Finanzieren;Immobilienfinanzierung;Eigenheim-Index
-34;29;Firmenkunden;Finanzieren;Immobilienfinanzierung;Steuern und Immobilien
-35;1;Firmenkunden;Absichern & Vorsorgen;;
-36;35;Firmenkunden;Absichern & Vorsorgen;Vorsorge Arbeitgeber;
-37;35;Firmenkunden;Absichern & Vorsorgen;Vorsorge Privatpersonen;
-38;1;Firmenkunden;Firmengründung & -nachfolge;;
-39;38;Firmenkunden;Firmengründung & -nachfolge;KMU Initiative;
-40;38;Firmenkunden;Firmengründung & -nachfolge;Kapitaleinzahlungskonto;
-41;38;Firmenkunden;Firmengründung & -nachfolge;Unternehmernachfolge;
 42;;Privatkunden;;;
 43;42;Privatkunden;Konten & Karten;;
 44;43;Privatkunden;Konten & Karten;Paketlösungen;
-45;44;Privatkunden;Konten & Karten;Paketlösungen;KBPlus-Paket
-46;44;Privatkunden;Konten & Karten;Paketlösungen;JUGENDPlus-Paket
-47;44;Privatkunden;Konten & Karten;Paketlösungen;BILDUNGPlus-Paket
+45;44;Privatkunden;Konten & Karten;Paketlösungen;Test-Paket
+46;44;Privatkunden;Konten & Karten;Paketlösungen;Test2-Paket
+47;44;Privatkunden;Konten & Karten;Paketlösungen;Test3-Paket
 48;43;Privatkunden;Konten & Karten;Privatkonten;
-49;48;Privatkunden;Konten & Karten;Privatkonten;Privatkonto CHF
-50;48;Privatkunden;Konten & Karten;Privatkonten;Privatkonto EUR
-51;48;Privatkunden;Konten & Karten;Privatkonten;Jugendprivatkonto
-52;43;Privatkunden;Konten & Karten;Sparkonten;
-53;52;Privatkunden;Konten & Karten;Sparkonten;Sparkonto CHF
-54;52;Privatkunden;Konten & Karten;Sparkonten;Sparkonto EUR
-55;52;Privatkunden;Konten & Karten;Sparkonten;Sparkonto Plus
-56;52;Privatkunden;Konten & Karten;Sparkonten;Sparkonto 60
-57;52;Privatkunden;Konten & Karten;Sparkonten;Geschenksparkonto
-58;52;Privatkunden;Konten & Karten;Sparkonten;Jugendsparkonto
-59;43;Privatkunden;Konten & Karten;Karten;
-60;59;Privatkunden;Konten & Karten;Karten;Maestrokarte
-61;59;Privatkunden;Konten & Karten;Karten;Maestro STUcard
-62;59;Privatkunden;Konten & Karten;Karten;Kreditkarte
-63;59;Privatkunden;Konten & Karten;Karten;Travel Cash
-64;43;Privatkunden;Konten & Karten;Zahlungsverkehr;
-65;64;Privatkunden;Konten & Karten;Zahlungsverkehr;Zahlungsverkehr
-66;64;Privatkunden;Konten & Karten;Zahlungsverkehr;E-Banking
 67;42;Privatkunden;Finanzieren & Eigenheim;;
 68;67;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;
 69;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Festhypothek
 70;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Liborhypothek
 71;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Variable Hypothek
 72;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Energiespar-Hypothek
-73;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Start-Hypothek
-74;68;Privatkunden;Finanzieren & Eigenheim;Hypothekenangebot;Baukredit
-75;67;Privatkunden;Finanzieren & Eigenheim;Wir beraten Sie zu;
-76;75;Privatkunden;Finanzieren & Eigenheim;Wir beraten Sie zu;Finanzierungsgrundsätze
-77;75;Privatkunden;Finanzieren & Eigenheim;Wir beraten Sie zu;Wunschobjekt finden
-78;75;Privatkunden;Finanzieren & Eigenheim;Wir beraten Sie zu;Objektkauf
-79;75;Privatkunden;Finanzieren & Eigenheim;Wir beraten Sie zu;Bauen / Umbauen
-80;75;Privatkunden;Finanzieren & Eigenheim;Wir beraten Sie zu;Steueroptimierung
-81;75;Privatkunden;Finanzieren & Eigenheim;Wir beraten Sie zu;Finanzielle Absicherung / Vorsorgen
-82;67;Privatkunden;Finanzieren & Eigenheim;Konti Bauen & Wohnen;
-83;82;Privatkunden;Finanzieren & Eigenheim;Konti Bauen & Wohnen;Baukonto
-84;82;Privatkunden;Finanzieren & Eigenheim;Konti Bauen & Wohnen;Liegenschaften-Konto
-85;67;Privatkunden;Finanzieren & Eigenheim;Privatkredit;
-86;85;Privatkunden;Finanzieren & Eigenheim;Privatkredit;Privatkredit
 87;42;Privatkunden;Vorsorgen;;
 88;87;Privatkunden;Vorsorgen;Vorsorgelösungen;
 89;88;Privatkunden;Vorsorgen;Vorsorgelösungen;Konto Vorsorge 3a
@@ -94,62 +37,3 @@ ID;Parent_ID;Level_1;Level_2;Level_3;Level_4
 93;87;Privatkunden;Vorsorgen;Risikoversicherung;
 94;93;Privatkunden;Vorsorgen;Risikoversicherung;Swisscanto Safe
 95;42;Privatkunden;Anlegen;;
-96;95;Privatkunden;Anlegen;Geld selber anlegen;
-97;96;Privatkunden;Anlegen;Geld selber anlegen;Vermögensberatung
-98;96;Privatkunden;Anlegen;Geld selber anlegen;Fonds/ETF Direktanlage Aktien/Obligationen
-99;96;Privatkunden;Anlegen;Geld selber anlegen;Anlageplan
-100;96;Privatkunden;Anlegen;Geld selber anlegen;Kassenobligationen
-101;96;Privatkunden;Anlegen;Geld selber anlegen;Direct Access
-102;95;Privatkunden;Anlegen;Vermögen verwalten lassen;
-103;102;Privatkunden;Anlegen;Vermögen verwalten lassen;Vermögensverwaltung
-104;42;Privatkunden;Finanzplanung;;
-105;104;Privatkunden;Finanzplanung;Pensionierungsplanung/Finanzplan;
-106;104;Privatkunden;Finanzplanung;Vorsorgeplanung;
-107;104;Privatkunden;Finanzplanung;Nachlassplanung;
-108;104;Privatkunden;Finanzplanung;Ehe- und Konkubinats-Verträge;
-109;104;Privatkunden;Finanzplanung;Steuerplanung;
-110;104;Privatkunden;Finanzplanung;Steuerdienstleistungen;
-111;42;Privatkunden;E-Angebote;;
-112;111;Privatkunden;E-Angebote;E-Banking;
-113;112;Privatkunden;E-Angebote;E-Banking;E-Banking
-114;112;Privatkunden;E-Angebote;E-Banking;E-Rechnung
-115;112;Privatkunden;E-Angebote;E-Banking;E-Banking Demo
-116;112;Privatkunden;E-Angebote;E-Banking;CrontoSign Swiss
-117;112;Privatkunden;E-Angebote;E-Banking;CrontoSign Anmeldung
-118;111;Privatkunden;E-Angebote;Mobile Banking;
-119;118;Privatkunden;E-Angebote;Mobile Banking;Mobile Banking
-120;118;Privatkunden;E-Angebote;Mobile Banking;Mobile App laden
-121;118;Privatkunden;E-Angebote;Mobile Banking;Voraussetzungen Mobile-App
-122;111;Privatkunden;E-Angebote;Sicherheit;
-123;122;Privatkunden;E-Angebote;Sicherheit;E-Banking Sicherheit
-124;122;Privatkunden;E-Angebote;Sicherheit;Sicherheitstipps Mobile App
-125;111;Privatkunden;E-Angebote;newhome.ch;
-126;;Ihre SHKB;;;
-127;126;Ihre SHKB;Kontakt;;
-128;127;Ihre SHKB;Kontakt;Filialen;
-129;127;Ihre SHKB;Kontakt;Bancomaten;
-130;127;Ihre SHKB;Kontakt;Notfallnummern;
-131;127;Ihre SHKB;Kontakt;Ansprechpartner;
-132;126;Ihre SHKB;Bank;;
-133;132;Ihre SHKB;Bank;Vision;
-134;132;Ihre SHKB;Bank;Kennzahlen;
-135;132;Ihre SHKB;Bank;Geschäftsbericht;
-136;132;Ihre SHKB;Bank;Unser Engagement;
-137;126;Ihre SHKB;Bank;;Vergünstigungen
-138;132;Ihre SHKB;Bank;Reglemente;
-139;132;Ihre SHKB;Bank;AGB;
-140;126;Ihre SHKB;Aktuelles;;
-141;140;Ihre SHKB;Aktuelles;Newsmeldungen;
-142;140;Ihre SHKB;Aktuelles;Publikationen;
-143;126;Ihre SHKB;Event-Kalender;;
-144;126;Ihre SHKB;Jobs;;
-145;144;Ihre SHKB;Jobs;Stellenangebot;
-146;144;Ihre SHKB;Jobs;Lehrstellen;
-147;126;Ihre SHKB;Menschen;;
-148;147;Ihre SHKB;Menschen;Geschäftsleitung;
-149;148;Ihre SHKB;Menschen;Kundenberater;
-150;126;Ihre SHKB;Mediencenter;;
-151;150;Ihre SHKB;Mediencenter;Pressemitteilungen;
-152;150;Ihre SHKB;Mediencenter;Logo;
-153;150;Ihre SHKB;Mediencenter;Bilder aus der Region;
-154;150;Ihre SHKB;Mediencenter;Medienkontakt;
