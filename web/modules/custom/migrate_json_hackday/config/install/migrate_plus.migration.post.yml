@@ -9,6 +9,7 @@ source:
     Accept: application/json
   identifier: id
   identifierDepth: 0
+  #track_changes: true
   fields:
     - userId
     - id
