@@ -1,5 +1,7 @@
-name: migrate_posts
 type: module
+name: Migrate Posts
+description: 'Imports menu structure from a csv file'
+package: Migration
 core: 8.x
 dependencies:
   - comment
@@ -9,4 +11,7 @@ dependencies:
   - path
   - text
   - user
+  - migrate
+  - migrate_plus
+  - migrate_source_csv
 version: 8.x-1.0
