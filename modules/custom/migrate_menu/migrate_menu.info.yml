@@ -1,0 +1,14 @@
+type: module
+name: Migrate Menu
+description: 'Imports menu structure from a csv file'
+package: Migration
+core: 8.x
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_source_csv
+config_devel:
+  install:
+    - migrate_plus.migration.page_node
+    - migrate_plus.migration.menu_item
+    - migrate_plus.migration_group.liip

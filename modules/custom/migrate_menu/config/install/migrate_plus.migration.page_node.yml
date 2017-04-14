@@ -1,0 +1,39 @@
+# Migration configuration
+id: page_node
+label: Dummy pages
+migration_group: liip
+source:
+  plugin: page_node
+  # Full path to the file. Is overriden in my plugin
+  path: public://csv/navigation_small.csv
+  # The number of rows at the beginning which are not data.
+  header_row_count: 1
+  # These are the field names from the source file representing the key
+  # uniquely identifying each node - they will be stored in the migration
+  # map table as columns sourceid1, sourceid2, and sourceid3.
+  keys:
+    - ID
+destination:
+  plugin: entity:node
+process:
+  type:
+    plugin: default_value
+    default_value: page
+  title: name
+  uid:
+    plugin: default_value
+    default_value: 1
+  sticky:
+    plugin: default_value
+    default_value: 0
+  status:
+    plugin: default_value
+    default_value: 1
+  promote:
+    plugin: default_value
+    default_value: 0
+  'body/value': body
+  'body/summary': excerpt
+
+#Absolutely necessary if you dont want an error
+migration_dependencies: {}

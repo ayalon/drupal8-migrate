@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function migrate_menu_uninstall() {
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.page_node')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.menu_item')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration_group.liip')->delete();
+}
