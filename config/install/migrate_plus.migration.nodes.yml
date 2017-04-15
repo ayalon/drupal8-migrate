@@ -1,0 +1,60 @@
+dependencies:
+  enforced:
+    # List here the name of the module that provided this migration if you want
+    # this config to be removed when that module is uninstalled.
+    module:
+      - migrate_menu_example
+id: node_examples
+label: Example nodes
+# The source data is in CSV files, so we use the 'csv' source plugin.
+source:
+  plugin: csv
+  # Full path to the file.
+  # TODO use a relative path, at public folder or use a php script to generate path
+  # Ref: path: public://csv/navigation_small.csv
+  path: /var/www/nova.calbasi.net/web/modules/custom/migrate_menu_example/data/example.csv
+  # The number of rows at the beginning which are not data.
+  header_row_count: 1
+  # These are the field names from the source file representing the key
+  # uniquely identifying each game - they will be stored in the migration
+  # map table as columns sourceid1, sourceid2, and sourceid3.
+  keys:
+    - nid_10000
+  # Here we identify the columns of interest in the source file. Each numeric
+  # key is the 0-based index of the column. For each column, the key below
+  # (e.g., "start_date") is the field name assigned to the data on import, to
+  # be used in field mappings below. The value is a user-friendly string for
+  # display by the migration UI.
+  column_names:
+    # So, here we're saying that the first field (index 0) on each line will
+    # be stored in the start_date field in the Row object during migration, and
+    # that name can be used to map the value below. "Date of game" will appear
+    # in the UI to describe this field.
+    0:
+      nid_10000: Node ID starting at 10000
+    1:
+      name: Name
+process:
+  # The content (node) type we are creating is 'page'.
+  type:
+    plugin: default_value
+    default_value: page
+  # Most fields can be mapped directly - we just specify the destination (D8)
+  # field and the corresponding field name from above, and the values will be
+  # copied in.
+  title:
+    plugin: get
+    source: name
+  nid: nid_10000
+destination:
+  # Here we're saying that each row of data (line from the CSV file) will be
+  # used to create a node entity.
+  plugin: entity:node
+# List any optional or required migration dependencies.
+# Requried means that 100% of the content must be migrated
+# Optional means that that the other dependency should be run first but if there
+# are items from the dependant migration that were not successful, it will still
+# run the migration.
+migration_dependencies:
+  required: {}
+  optional: {}

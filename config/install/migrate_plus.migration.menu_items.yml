@@ -1,0 +1,90 @@
+dependencies:
+  enforced:
+    # List here the name of the module that provided this migration if you want
+    # this config to be removed when that module is uninstalled.
+    module:
+      - migrate_menu_example
+id: menu_item_examples
+label: Example menu items
+# The source data is in CSV files, so we use the 'csv' source plugin.
+source:
+  plugin: csv
+  # Full path to the file.
+  # TODO use a relative path, at public folder or use a php script to generate path
+  # Ref: path: public://csv/navigation_small.csv
+  path: /var/www/nova.calbasi.net/web/modules/custom/migrate_menu_example/data/example.csv
+  header_row_count: 1
+  # These are the field names from the source file representing the key
+  # uniquely identifying each node - they will be stored in the migration
+  # map table as columns sourceid1, sourceid2, and sourceid3.
+#  keys:
+#    - ID
+  keys:
+    - nid_10000
+  # Here we identify the columns of interest in the source file. Each numeric
+  # key is the 0-based index of the column. For each column, the key below
+  # (e.g., "start_date") is the field name assigned to the data on import, to
+  # be used in field mappings below. The value is a user-friendly string for
+  # display by the migration UI.
+  column_names:
+    # So, here we're saying that the first field (index 0) on each line will
+    # be stored in the start_date field in the Row object during migration, and
+    # that name can be used to map the value below. "Date of game" will appear
+    # in the UI to describe this field.
+    0:
+      nid_10000: Node ID starting at 10000
+    1:
+      name: Name
+    2:
+      nid_parent: Parent NID
+process:
+  bundle: menu_link_content
+  title: name
+  menu_name:
+    plugin: default_value
+    default_value: main
+  # Full Pipeline.. see https://www.drupal.org/node/2129651
+  'link/uri':
+    -
+      plugin: migration
+      migration: node_examples
+      source: nid_10000
+    -
+      plugin: generate_path
+#  route_name: '@route/route_name'
+#  route_parameters: '@route/route_parameters'
+#  url: '@route/url'
+#  options: '@route/options'
+  external:
+    plugin: default_value
+    default_value: 0
+  weight: 
+    plugin: default_value
+    default_value: 0
+  expanded:
+    plugin: default_value
+    default_value: 1
+  enabled:
+    plugin: default_value
+    default_value: 1
+  parent:
+#Trying to use a default value, without success
+#    plugin: default_value
+ #   default_value: 10003
+# Using plugin menu_link_parent without success
+    plugin: menu_link_parent
+    source:
+ # trying a fix value of an existent menu item, without success either
+      - '10003'
+      - 'main'
+      - 'Portugal'
+#      - nid_parent
+#      - '@menu_name'
+#      - 'Portugal'
+  changed: updated
+destination:
+  plugin: entity:menu_link_content
+#  no_stub: true
+migration_dependencies:
+  required:
+    - node_examples
