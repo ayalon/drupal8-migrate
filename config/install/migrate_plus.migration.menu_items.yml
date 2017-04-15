@@ -1,12 +1,18 @@
-# Migration configuration
-id: menu_item
-label: Menu links
-migration_group: destinacions
+dependencies:
+  enforced:
+    # List here the name of the module that provided this migration if you want
+    # this config to be removed when that module is uninstalled.
+    module:
+      - migrate_menu_example
+id: menu_item_examples
+label: Example menu items
+# The source data is in CSV files, so we use the 'csv' source plugin.
 source:
-  plugin: menu_item
-  # Full path to the file. Is overriden in my plugin
-  path: public://csv/navigation_small.csv
-  # The number of rows at the beginning which are not data.
+  plugin: csv
+  # Full path to the file.
+  # TODO use a relative path, at public folder or use a php script to generate path
+  # Ref: path: public://csv/navigation_small.csv
+  path: /var/www/nova.calbasi.net/web/modules/custom/migrate_menu_example/data/example.csv
   header_row_count: 1
   # These are the field names from the source file representing the key
   # uniquely identifying each node - they will be stored in the migration
@@ -14,7 +20,7 @@ source:
 #  keys:
 #    - ID
   keys:
-    - id
+    - nid_10000
   # Here we identify the columns of interest in the source file. Each numeric
   # key is the 0-based index of the column. For each column, the key below
   # (e.g., "start_date") is the field name assigned to the data on import, to
@@ -25,22 +31,15 @@ source:
     # be stored in the start_date field in the Row object during migration, and
     # that name can be used to map the value below. "Date of game" will appear
     # in the UI to describe this field.
-    #0 La primera columna no l importarem
+    0:
+      nid_10000: Node ID starting at 10000
     1:
-      id: id
+      name: Name
     2:
-      nom_destinacio: Nom Destinació
-    #crec que el nom de les columnes és prescindible i, de fet, pot donar a error amb el rollo dels índex, si afegim una columna al CSV
-destination:
-  plugin: entity:menu_link_content
-  no_stub: true
+      nid_parent: Parent NID
 process:
   bundle: menu_link_content
-# El titol no cal que ens vingui del plugin del mòdul
-  #title: name
-  title: nom_destinacio
-  #  plugin: default_value
-  #  default_value: test
+  title: name
   menu_name:
     plugin: default_value
     default_value: main
@@ -48,8 +47,8 @@ process:
   'link/uri':
     -
       plugin: migration
-      migration: migracio_destinacions
-      source: id
+      migration: node_examples
+      source: nid_10000
     -
       plugin: generate_path
 #  route_name: '@route/route_name'
@@ -69,17 +68,23 @@ process:
     plugin: default_value
     default_value: 1
   parent:
-    plugin: default_value
-    default_value: 11
-#    plugin: menu_link_parent
- #   source:
-  #    - '31'
-   #   - 'main'
-    #  - 'andorra'
-#      - id_pare_1000
+#Trying to use a default value, without success
+#    plugin: default_value
+ #   default_value: 10003
+# Using plugin menu_link_parent without success
+    plugin: menu_link_parent
+    source:
+ # trying a fix value of an existent menu item, without success either
+      - '10003'
+      - 'main'
+      - 'Portugal'
+#      - nid_parent
 #      - '@menu_name'
-#      - parent_name
+#      - 'Portugal'
   changed: updated
+destination:
+  plugin: entity:menu_link_content
+#  no_stub: true
 migration_dependencies:
   required:
-    - migracio_destinacions
+    - node_examples

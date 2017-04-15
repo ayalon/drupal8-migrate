@@ -1,3 +1,3 @@
-# Drupal 8 Migrate Menu
+# Drupal 8 Migrate Menu Example
 
-Trying to migrate a menu from a CSV of a non drupal source
+Trying to set up a minimum module to migrate a CSV menu

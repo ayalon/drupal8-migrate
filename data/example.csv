@@ -1,0 +1,19 @@
+"nid_10000","name","nid_parent"
+10001,"Estados Unidos","NULL"
+10002,"Nueva York",10001
+10003,"Portugal","NULL"
+10005,"Lisboa",10003
+10007,"Argentina","NULL"
+10008,"Alemania","NULL"
+10009,"Berlin",10008
+10010,"Australia","NULL"
+10011,"Arabia Saudi","NULL"
+10012,"Bahrein","NULL"
+10013,"Buenos Aires",10007
+10014,"Belgica","NULL"
+10015,"Bruselas",10014
+10016,"Brujas",10014
+10017,"Amberes",10014
+10018,"Gante",10014
+10019,"Botsuana","NULL"
+10020,"Brasil","NULL"

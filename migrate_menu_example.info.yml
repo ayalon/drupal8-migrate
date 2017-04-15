@@ -1,0 +1,11 @@
+type: module
+name: Migrate Menu Example
+description: 'Imports menu structure from a csv file'
+package: Migration
+core: 8.x
+dependencies:
+  - drupal:migrate
+  - migrate_plus
+  - migrate_source_csv
+  - migrate_tools
+

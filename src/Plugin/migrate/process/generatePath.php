@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Drupal\migrate_menu\Plugin\migrate\process;
+namespace Drupal\migrate_menu_example\Plugin\migrate\process;
 
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\ProcessPluginBase;
