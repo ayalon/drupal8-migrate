@@ -24,8 +24,8 @@ class PageNode extends CSV {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $migration);
 
     //override the path to point to the local module directory
-    $this->configuration['path'] = drupal_get_path('module', 'migrate_menu') . '/data/navigation.csv';
-    $this->configuration['delimiter'] = ';';
+    $this->configuration['path'] = drupal_get_path('module', 'migrate_menu') . '/data/lp_destino.csv';
+    $this->configuration['delimiter'] = ',';
 
   }
 
@@ -36,12 +36,15 @@ class PageNode extends CSV {
 
     // Magic: get the current page name.
     $csv_data = $row->getSource();
+    /*
     for ($i = 4; $i > 0; $i--) {
       if (!empty($csv_data['Level_' . $i])) {
         $row->setSourceProperty('name', $csv_data['Level_' . $i]);
         break;
       }
     }
+    */
+    $row->setSourceProperty('name', $csv_data['v_destino']);
 
     return parent::prepareRow($row);
   }

@@ -24,8 +24,8 @@ class MenuItem extends CSV {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $migration);
 
     //override the path to point to the local module directory
-    $this->configuration['path'] = drupal_get_path('module', 'migrate_menu') . '/data/navigation.csv';
-    $this->configuration['delimiter'] = ';';
+    $this->configuration['path'] = drupal_get_path('module', 'migrate_menu') . '/data/lp_destino.csv';
+    $this->configuration['delimiter'] = ',';
 
   }
 
@@ -40,15 +40,16 @@ class MenuItem extends CSV {
 
     $csv_data = $row->getSource();
 
-    $row->setSourceProperty('name', '');
-    $row->setSourceProperty('parent', '');
+#    $row->setSourceProperty('name', '');
+#    $row->setSourceProperty('parent', '');
 
-    $row->setSourceProperty('link_path', $csv_data['ID']);
+    $row->setSourceProperty('link_path', $csv_data['id_1000']);
     $row->setSourceProperty('options', array());
 
     // Super Macic function for defining parent term
     // This magic allows us to avoid relying on the name while finding the parent term.
 
+/*
     for ($i = 4; $i > 0; $i--) {
       if (!empty($csv_data['Level_' . $i])) {
         $row->setSourceProperty('name', $csv_data['Level_' . $i]);
@@ -58,6 +59,15 @@ class MenuItem extends CSV {
         break;
       }
     }
+*/
+#    $row->setSourceProperty('name', $csv_data['v_destino']);
+ #   $row->setSourceProperty('name', 'Test');
+    if (!empty($csv_data['id_lp_destino_superior'])) {
+      $row->setSourceProperty('parent_name', 'Estados Unidos');  // Cal refer aixo
+    } else{
+      $row->setSourceProperty('parent_name', 'Europa');   // Cal refer aixo
+    }
+
   }
 
 }
